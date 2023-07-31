@@ -1,0 +1,15 @@
+{
+    "FEM_order": 1,
+    "N_p": 20,
+    "N_x": 30,
+    "N_y": 10,
+    "N_z": 10,
+    "clean_on_exit": false,
+    "mode": "P2D",
+    "particle_coupling": "implicit",
+    "particle_order": 2,
+    "solve_LAM": false,
+    "solve_SEI": true,
+    "solve_thermal": false,
+    "time_scheme": "euler_implicit"
+}

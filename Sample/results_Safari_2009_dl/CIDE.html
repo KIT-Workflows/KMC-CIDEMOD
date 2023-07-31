@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Summary of Timings</title>
+</head>
+<body>
+    <table border="1" cellpadding="5" cellspacing="0">
+        <tr>
+            <th>Summary of Timings</th>
+            <th>reps</th>
+            <th>wall avg</th>
+            <th>wall tot</th>
+            <th>usr avg</th>
+            <th>usr tot</th>
+            <th>sys avg</th>
+            <th>sys tot</th>
+        </tr>
+        <tr>
+            <td>Adaptive TS</td>
+            <td>37635</td>
+            <td>0.072123</td>
+            <td>2714.3</td>
+            <td>0.070971</td>
+            <td>2671</td>
+            <td>0.00104</td>
+            <td>39.14</td>
+        </tr>
+        <tr>
+            <td>Apply (PETScMatrix)</td>
+            <td>418162</td>
+            <td>1.1255e-06</td>
+            <td>0.47065</td>
+            <td>1.2675e-06</td>
+            <td>0.53</td>
+            <td>2.3914e-08</td>
+            <td>0.01</td>
+        </tr>
+        <tr>
+            <td>Apply (PETScVector)</td>
+            <td>7605202</td>
+            <td>1.3241e-06</td>
+            <td>10.07</td>
+            <td>1.1466e-06</td>
+            <td>8.72</td>
+            <td>3.5502e-08</td>
+            <td>0.27</td>
+        </tr>
+        <tr>
+            <td>Assemble cells</td>
+            <td>8813306</td>
+            <td>0.00016022</td>
+            <td>1412.1</td>
+            <td>0.00015772</td>
+            <td>1390</td>
+            <td>2.1865e-06</td>
+            <td>19.27</td>
+        </tr>
+        <tr>
+            <td>Assemble exterior facets</td>
+            <td>1022270</td>
+            <td>1.0022e-05</td>
+            <td>10.245</td>
+            <td>9.4985e-06</td>
+            <td>9.71</td>
+            <td>3.4238e-07</td>
+            <td>0.35</td>
+        </tr>
+        <tr>
+            <td>Assemble interior facets</td>
+            <td>8</td>
+            <td>1.5345e-05</td>
+            <td>0.00012276</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Assemble system</td>
+            <td>600</td>
+            <td>0.00032176</td>
+            <td>0.19306</td>
+            <td>0.00033333</td>
+            <td>0.2</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Basic TS</td>
+            <td>38062</td>
+            <td>0.06263</td>
+            <td>2383.8</td>
+            <td>0.061583</td>
+            <td>2344</td>
+            <td>0.0009566</td>
+            <td>36.41</td>
+        </tr>
+        <tr>
+            <td>Build SubdomainMapper</td>
+            <td>1</td>
+            <td>0.011883</td>
+            <td>0.011883</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Build sparsity</td>
+            <td>1202</td>
+            <td>4.8348e-05</td>
+            <td>0.058114</td>
+            <td>4.9917e-05</td>
+            <td>0.06</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Building function space</td>
+            <td>1</td>
+            <td>0.041331</td>
+            <td>0.041331
+                    <tr>
+            <td>Building function space</td>
+            <td>1</td>
+            <td>0.041331</td>
+            <td>0.041331</td>
+            <td>0.02</td>
+            <td>0.02</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Building mesh</td>
+            <td>1</td>
+            <td>0.09455</td>
+            <td>0.09455</td>
+            <td>0.05</td>
+            <td>0.05</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Compute SCOTCH graph re-ordering</td>
+            <td>604</td>
+            <td>3.8405e-05</td>
+            <td>0.023197</td>
+            <td>3.3113e-05</td>
+            <td>0.02</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Compute connectivity 0-0</td>
+            <td>1</td>
+            <td>1.1311e-05</td>
+            <td>1.1311e-05</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Compute connectivity 0-1</td>
+            <td>1</td>
+            <td>0.00051805</td>
+            <td>0.00051805</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Compute connectivity 1-1</td>
+            <td>1</td>
+            <td>0.00044293</td>
+            <td>0.00044293</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <!-- Add more rows here (continued) -->
+        <tr>
+            <td>SNES solver execution</td>
+            <td>38362</td>
+            <td>0.062006</td>
+            <td>2378.7</td>
+            <td>0.06097</td>
+            <td>2338.9</td>
+            <td>0.00094573</td>
+            <td>36.28</td>
+        </tr>
+        <tr>
+            <td>SNES solver init</td>
+            <td>38362</td>
+            <td>5.6022e-05</td>
+            <td>2.1491</td>
+            <td>4.64e-05</td>
+            <td>1.78</td>
+            <td>2.0854e-06</td>
+            <td>0.08</td>
+        </tr>
+        <tr>
+            <td>Simulation time</td>
+            <td>300</td>
+            <td>9.2021</td>
+            <td>2760.6</td>
+            <td>9.055</td>
+            <td>2716.5</td>
+            <td>0.13237</td>
+            <td>39.71</td>
+        </tr>
+        <tr>
+            <td>Solving linear system</td>
+            <td>600</td>
+            <td>0.00025644</td>
+            <td>0.15387</td>
+            <td>0.00026667</td>
+            <td>0.16</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Store Globals</td>
+            <td>36437</td>
+            <td>0.0021393</td>
+            <td>77.951</td>
+            <td>0.0021097</td>
+            <td>76.87</td>
+            <td>1.7565e-05</td>
+            <td>0.64</td>
+        </tr>
+        <tr>
+            <td>TF Error</td>
+            <td>37635</td>
+            <td>0.0044251</td>
+            <td>166.54</td>
+            <td>0.0043797</td>
+            <td>164.83</td>
+            <td>3.8528e-05</td>
+            <td>1.45</td>
+        </tr>
+    </table>
+</body>
+</html>

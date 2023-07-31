@@ -1,0 +1,52 @@
+<WaNoTemplate>
+
+  <WaNoMeta>
+      <Author>
+            <Name> Meysam Esmaeilpour </Name>
+            <Email>meysam.esmaeilpour@kit.edu</Email>
+      </Author>
+
+      <Description>
+            This WaNo is dedicated to cideMOD that solves DFN physicochemical equations by Finite Element methods using FEniCS library.
+      </Description>
+      <Keyword>cidemod</Keyword>
+  </WaNoMeta>
+
+  <WaNoRoot name="CIDEMOD">
+      <WaNoDictBox name="Safari 2009 case files">      
+        <WaNoFile logical_filename="params_cycling_lumped.json" name="Cycling lumped" local="True">params_cycling_lumped.json</WaNoFile>
+        <WaNoFile logical_filename="params_cycling_workflow.json" name="Cycling workflow" local="True">params_cycling_workflow.json</WaNoFile>
+        <WaNoFile logical_filename="OCV_G.txt" name="OCV_G" local="True">OCV_G.txt</WaNoFile>
+        <WaNoFile logical_filename="OCV_LCO.txt" name="OCV_LCO" local="True">OCV_LCO.txt</WaNoFile>
+      </WaNoDictBox>
+      <WaNoDictBox name="cideMOD parameters">
+            <WaNoInt name="n_cycles" description="Cycles">100</WaNoInt>
+            <WaNoFloat name="crate" description="crate">0.5</WaNoFloat>
+            <WaNoFloat name="v_min" description="v_min">2</WaNoFloat>
+            <WaNoFloat name="v_max" description="v_max">4.2</WaNoFloat>
+      </WaNoDictBox>
+  </WaNoRoot>
+
+  <WaNoExecCommand>
+      bash run.sh
+  </WaNoExecCommand>
+      
+  <WaNoInputFiles>
+      <WaNoInputFile logical_filename="run.sh">run.sh</WaNoInputFile>
+      <WaNoInputFile logical_filename="CIDEMOD.py">CIDEMOD.py</WaNoInputFile>
+  </WaNoInputFiles>
+
+    <WaNoOutputFiles>
+      <WaNoOutputFile>params.json</WaNoOutputFile>
+      <WaNoOutputFile>simulation_options.json</WaNoOutputFile>
+      <WaNoOutputFile>test_plan.json</WaNoOutputFile>
+      <WaNoOutputFile>capacity.txt</WaNoOutputFile>
+      <WaNoOutputFile>condensated.txt</WaNoOutputFile>
+      <WaNoOutputFile>current.txt</WaNoOutputFile>
+      <WaNoOutputFile>delta_sei_a0.txt</WaNoOutputFile>
+      <WaNoOutputFile>Q_sei_a0.txt</WaNoOutputFile>
+      <WaNoOutputFile>timings.log</WaNoOutputFile>
+      <WaNoOutputFile>voltage.txt</WaNoOutputFile>
+  </WaNoOutputFiles>
+
+</WaNoTemplate>

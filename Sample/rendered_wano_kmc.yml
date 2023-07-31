@@ -1,0 +1,27 @@
+Activation energy barriers (eV):
+  E1: 0.5
+  E10: 0.51
+  E11: 0.48
+  E12: 0.41
+  E13: 0.36
+  E14: 0.35
+  E15: 0.38
+  E16: 0.01
+  E17: 0.01
+  E18: 0.01
+  E19: 0.01
+  E2: 0.27
+  E3: 0.32
+  E4: 0.41
+  E5: 0.63
+  E6: 0.75
+  E7: 0.53
+  E8: 0.47
+  E9: 0.46
+Lattice size:
+  Xdim: 50
+  Ydim: 50
+Save step:
+  SaveStep: 1000
+Temperature (K):
+  T: 300

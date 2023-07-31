@@ -1,0 +1,70 @@
+<WaNoTemplate>
+
+  <WaNoMeta>
+      <Author>
+            <Name> Meysam Esmaeilpour </Name>
+            <Email>meysam.esmaeilpour@kit.edu</Email>
+      </Author>
+
+      <Description>
+            This WaNo provides KMC simulations for SEI growth.
+      </Description>
+      <Keyword>sei</Keyword>
+  </WaNoMeta>
+
+  <WaNoRoot name="KMC_SEI">
+      <WaNoDictBox name="Lattice size">
+            <WaNoInt name="Xdim" description="Lattice x dimnesion">50</WaNoInt>
+            <WaNoInt name="Ydim" description="Lattice y dimension">50</WaNoInt>
+      </WaNoDictBox>
+
+      <WaNoDictBox name="Temperature (K)">
+            <WaNoInt name="T" description="Simulation temperature">300</WaNoInt>
+      </WaNoDictBox>
+
+      <WaNoDictBox name="Save step">
+            <WaNoInt name="SaveStep" description="Save step">1000</WaNoInt>
+      </WaNoDictBox>
+            
+      <WaNoDictBox name="Activation energy barriers (eV)">
+            <WaNoFloat name="E1" description="First electron reduction at surface">0.5</WaNoFloat>
+            <WaNoFloat name="E2" description="First electron reduction (less than 4nm)">0.27</WaNoFloat>
+            <WaNoFloat name="E3" description="Second electron reduction">0.32</WaNoFloat>
+            <WaNoFloat name="E4" description="Li2EDC production">0.41</WaNoFloat>
+            <WaNoFloat name="E5" description="Pair Li2EDC production">0.63</WaNoFloat>
+            <WaNoFloat name="E6" description="Li2EDC+Li2EDC_2 -&gt; SEI_cluster">0.75</WaNoFloat>
+            <WaNoFloat name="E7" description="Second electron reduction (less than 4nm)">0.53</WaNoFloat>
+            <WaNoFloat name="E8" description="Li2EDC+SEI_cluster -&gt; SEI_cluster">0.47</WaNoFloat>
+            <WaNoFloat name="E9" description="Li2EDC_2+SEI_cluster -&gt; SEI_cluster">0.46</WaNoFloat>
+            <WaNoFloat name="E10" description="Li2EDC_2+Li2EDC_2 -&gt; SEI_cluster">0.51</WaNoFloat>
+            <WaNoFloat name="E11" description="SEI_cluster+SEI_cluster-&gt;SEI_cluster">0.48</WaNoFloat>
+            <WaNoFloat name="E12" description="Li2EDC_2 diffusion">0.41</WaNoFloat>
+            <WaNoFloat name="E13" description="Li2EDC diffusion">0.36</WaNoFloat>
+            <WaNoFloat name="E14" description="C2H4OCO2Li diffusion">0.35</WaNoFloat>
+            <WaNoFloat name="E15" description="SEI_clsuter diffusion">0.38</WaNoFloat>
+            <WaNoFloat name="E16" description="C2H4OCO2Li escape">0.01</WaNoFloat>
+            <WaNoFloat name="E17" description="Li2EDC escape">0.01</WaNoFloat>
+            <WaNoFloat name="E18" description="Li2EDC_2 escape">0.01</WaNoFloat>
+            <WaNoFloat name="E19" description="SEI_cluster escape">0.01</WaNoFloat>
+      </WaNoDictBox>
+  </WaNoRoot>
+
+  <WaNoExecCommand>
+        bash run.sh
+  </WaNoExecCommand>
+      
+  <WaNoInputFiles>
+      <WaNoInputFile logical_filename="run.sh.py">run.sh</WaNoInputFile>
+      <WaNoInputFile logical_filename="KMC_SEI.py">KMC_SEI.py</WaNoInputFile>
+      <WaNoInputFile logical_filename="support.py">support.py</WaNoInputFile>
+      <WaNoInputFile logical_filename="initialize.py">initialize.py</WaNoInputFile>
+      <WaNoInputFile logical_filename="collection.py">collection.py</WaNoInputFile>
+      <WaNoInputFile logical_filename="update.py">update.py</WaNoInputFile>
+  </WaNoInputFiles>
+
+  <WaNoOutputFiles>
+      <WaNoOutputFile>../kmc_data.yml</WaNoOutputFile>
+  </WaNoOutputFiles>
+
+
+</WaNoTemplate>

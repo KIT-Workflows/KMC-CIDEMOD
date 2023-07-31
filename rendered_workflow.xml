@@ -1,0 +1,144 @@
+<Workflow wfname="KMC_CIDEMOD" storage="/home/ws/ab5528/simstack_workspace/2023-07-27-17h16m30s-KMC_CIDEMOD" name="KMC_CIDEMOD" submit_name="2023-07-27-17h16m30s-KMC_CIDEMOD" status="6" queueing_system="slurm">
+  <elements>
+    <WorkflowExecModule id="0" type="WorkflowExecModule" uid="53f17b8f-da36-482f-a531-7dcdffb2bb0b" given_name="KMC_SEI" path="KMC_SEI" wano_xml="KMC_SEI.xml" outputpath="KMC_SEI">
+      <inputs>
+        <Ele_0 id="0" type="StringList">
+          <Ele_0 id="0" type="str">KMC_SEI.py</Ele_0>
+          <Ele_1 id="1" type="str">workflow_data/KMC_SEI/inputs/KMC_SEI.py</Ele_1>
+        </Ele_0>
+        <Ele_1 id="1" type="StringList">
+          <Ele_0 id="0" type="str">support.py</Ele_0>
+          <Ele_1 id="1" type="str">workflow_data/KMC_SEI/inputs/support.py</Ele_1>
+        </Ele_1>
+        <Ele_2 id="2" type="StringList">
+          <Ele_0 id="0" type="str">initialize.py</Ele_0>
+          <Ele_1 id="1" type="str">workflow_data/KMC_SEI/inputs/initialize.py</Ele_1>
+        </Ele_2>
+        <Ele_3 id="3" type="StringList">
+          <Ele_0 id="0" type="str">collection.py</Ele_0>
+          <Ele_1 id="1" type="str">workflow_data/KMC_SEI/inputs/collection.py</Ele_1>
+        </Ele_3>
+        <Ele_4 id="4" type="StringList">
+          <Ele_0 id="0" type="str">update.py</Ele_0>
+          <Ele_1 id="1" type="str">workflow_data/KMC_SEI/inputs/update.py</Ele_1>
+        </Ele_4>
+      </inputs>
+      <outputs>
+        <Ele_0 id="0" type="StringList">
+          <Ele_0 id="0" type="str">../kmc_data.yml</Ele_0>
+          <Ele_1 id="1" type="str">../kmc_data.yml</Ele_1>
+        </Ele_0>
+      </outputs>
+      <exec_command>export NANOVER=V4
+      source $NANOMATCH/$NANOVER/configs/simstack_kit.config
+      python3 KMC_SEI.py
+</exec_command>
+      <resources walltime="10800" cpus_per_node="1" nodes="1" memory="1024">
+        <queue>default</queue>
+        <host>localhost</host>
+        <custom_requests>None</custom_requests>
+        <base_URI>None</base_URI>
+        <port>22</port>
+        <username>None</username>
+        <basepath>simstack_workspace</basepath>
+        <queueing_system>slurm</queueing_system>
+        <sw_dir_on_resource>/home/nanomatch/nanomatch</sw_dir_on_resource>
+        <ssh_private_key>UseSystemDefault</ssh_private_key>
+      </resources>
+      <runtime_directory>/home/ws/ab5528/simstack_workspace/2023-07-27-17h16m30s-KMC_CIDEMOD/exec_directories/2023-07-27-17h16m31s-KMC_SEI</runtime_directory>
+      <jobid>4359482</jobid>
+      <queueing_system>slurm</queueing_system>
+    </WorkflowExecModule>
+    <WorkflowExecModule id="1" type="WorkflowExecModule" uid="cd235f8f-e3ad-4793-b89a-a2ddd9ab81c0" given_name="CIDEMOD" path="CIDEMOD" wano_xml="CIDEMOD.xml" outputpath="CIDEMOD">
+      <inputs>
+        <Ele_0 id="0" type="StringList">
+          <Ele_0 id="0" type="str">params_cycling_lumped.json</Ele_0>
+          <Ele_1 id="1" type="str">workflow_data/CIDEMOD/inputs/params_cycling_lumped.json</Ele_1>
+        </Ele_0>
+        <Ele_1 id="1" type="StringList">
+          <Ele_0 id="0" type="str">params_cycling_workflow.json</Ele_0>
+          <Ele_1 id="1" type="str">workflow_data/CIDEMOD/inputs/params_cycling_workflow.json</Ele_1>
+        </Ele_1>
+        <Ele_2 id="2" type="StringList">
+          <Ele_0 id="0" type="str">OCV_G.txt</Ele_0>
+          <Ele_1 id="1" type="str">workflow_data/CIDEMOD/inputs/OCV_G.txt</Ele_1>
+        </Ele_2>
+        <Ele_3 id="3" type="StringList">
+          <Ele_0 id="0" type="str">OCV_LCO.txt</Ele_0>
+          <Ele_1 id="1" type="str">workflow_data/CIDEMOD/inputs/OCV_LCO.txt</Ele_1>
+        </Ele_3>
+        <Ele_4 id="4" type="StringList">
+          <Ele_0 id="0" type="str">run.sh</Ele_0>
+          <Ele_1 id="1" type="str">workflow_data/CIDEMOD/inputs/run.sh</Ele_1>
+        </Ele_4>
+        <Ele_5 id="5" type="StringList">
+          <Ele_0 id="0" type="str">CIDEMOD.py</Ele_0>
+          <Ele_1 id="1" type="str">workflow_data/CIDEMOD/inputs/CIDEMOD.py</Ele_1>
+        </Ele_5>
+      </inputs>
+      <outputs>
+        <Ele_0 id="0" type="StringList">
+          <Ele_0 id="0" type="str">params.json</Ele_0>
+          <Ele_1 id="1" type="str">params.json</Ele_1>
+        </Ele_0>
+        <Ele_1 id="1" type="StringList">
+          <Ele_0 id="0" type="str">simulation_options.json</Ele_0>
+          <Ele_1 id="1" type="str">simulation_options.json</Ele_1>
+        </Ele_1>
+        <Ele_2 id="2" type="StringList">
+          <Ele_0 id="0" type="str">test_plan.json</Ele_0>
+          <Ele_1 id="1" type="str">test_plan.json</Ele_1>
+        </Ele_2>
+        <Ele_3 id="3" type="StringList">
+          <Ele_0 id="0" type="str">capacity.txt</Ele_0>
+          <Ele_1 id="1" type="str">capacity.txt</Ele_1>
+        </Ele_3>
+        <Ele_4 id="4" type="StringList">
+          <Ele_0 id="0" type="str">condensated.txt</Ele_0>
+          <Ele_1 id="1" type="str">condensated.txt</Ele_1>
+        </Ele_4>
+        <Ele_5 id="5" type="StringList">
+          <Ele_0 id="0" type="str">current.txt</Ele_0>
+          <Ele_1 id="1" type="str">current.txt</Ele_1>
+        </Ele_5>
+        <Ele_6 id="6" type="StringList">
+          <Ele_0 id="0" type="str">delta_sei_a0.txt</Ele_0>
+          <Ele_1 id="1" type="str">delta_sei_a0.txt</Ele_1>
+        </Ele_6>
+        <Ele_7 id="7" type="StringList">
+          <Ele_0 id="0" type="str">Q_sei_a0.txt</Ele_0>
+          <Ele_1 id="1" type="str">Q_sei_a0.txt</Ele_1>
+        </Ele_7>
+        <Ele_8 id="8" type="StringList">
+          <Ele_0 id="0" type="str">timings.log</Ele_0>
+          <Ele_1 id="1" type="str">timings.log</Ele_1>
+        </Ele_8>
+        <Ele_9 id="9" type="StringList">
+          <Ele_0 id="0" type="str">voltage.txt</Ele_0>
+          <Ele_1 id="1" type="str">voltage.txt</Ele_1>
+        </Ele_9>
+      </outputs>
+      <exec_command>bash run.sh
+</exec_command>
+      <resources walltime="10800" cpus_per_node="2" nodes="1" memory="4096">
+        <queue>default</queue>
+        <host>localhost</host>
+        <custom_requests>None</custom_requests>
+        <base_URI>None</base_URI>
+        <port>22</port>
+        <username>None</username>
+        <basepath>simstack_workspace</basepath>
+        <queueing_system>slurm</queueing_system>
+        <sw_dir_on_resource>/home/nanomatch/nanomatch</sw_dir_on_resource>
+        <ssh_private_key>UseSystemDefault</ssh_private_key>
+      </resources>
+      <runtime_directory>/home/ws/ab5528/simstack_workspace/2023-07-27-17h16m30s-KMC_CIDEMOD/exec_directories/2023-07-27-20h16m57s-CIDEMOD</runtime_directory>
+      <jobid>4359488</jobid>
+      <queueing_system>slurm</queueing_system>
+    </WorkflowExecModule>
+  </elements>
+  <graph>
+    <graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">  <key id="d0" for="node" attr.name="status" attr.type="string"/>  <graph edgedefault="directed">    <node id="0">      <data key="d0">success</data>    </node>    <node id="53f17b8f-da36-482f-a531-7dcdffb2bb0b">      <data key="d0">success</data>    </node>    <node id="cd235f8f-e3ad-4793-b89a-a2ddd9ab81c0">      <data key="d0">failed</data>    </node>    <edge source="0" target="53f17b8f-da36-482f-a531-7dcdffb2bb0b"/>    <edge source="53f17b8f-da36-482f-a531-7dcdffb2bb0b" target="cd235f8f-e3ad-4793-b89a-a2ddd9ab81c0"/>  </graph></graphml>
+  </graph>
+</Workflow>
+

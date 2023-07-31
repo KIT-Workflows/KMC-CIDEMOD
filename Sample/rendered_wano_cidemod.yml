@@ -1,0 +1,10 @@
+Safari 2009 case files:
+  Cycling lumped: params_cycling_lumped.json
+  Cycling workflow: params_cycling_workflow.json
+  OCV_G: OCV_G.txt
+  OCV_LCO: OCV_LCO.txt
+cideMOD parameters:
+  crate: 0.5
+  n_cycles: 100
+  v_max: 4.2
+  v_min: 2.0
