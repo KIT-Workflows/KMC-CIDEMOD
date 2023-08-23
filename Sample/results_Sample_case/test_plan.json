@@ -1,0 +1,61 @@
+{
+    "initial_state": {
+        "SOC": 1,
+        "exterior_temperature": 298
+    },
+    "steps": [
+        {
+            "count": 100,
+            "name": "Discharge Cycle",
+            "steps": [
+                {
+                    "adaptive": true,
+                    "events": [
+                        {
+                            "atol": 0.0001,
+                            "goto": "Next",
+                            "rtol": 0.001,
+                            "type": "Voltage",
+                            "unit": "V",
+                            "value": 2
+                        }
+                    ],
+                    "min_step": 30,
+                    "name": "Discharge",
+                    "store_delay": -1,
+                    "t_max": {
+                        "unit": "h",
+                        "value": 2.5
+                    },
+                    "type": "Current",
+                    "unit": "A",
+                    "value": -0.8488917862020671
+                },
+                {
+                    "adaptive": true,
+                    "events": [
+                        {
+                            "atol": 0.0001,
+                            "goto": "CV",
+                            "rtol": 0.001,
+                            "type": "Voltage",
+                            "unit": "V",
+                            "value": 4.2
+                        }
+                    ],
+                    "min_step": 30,
+                    "name": "Charge",
+                    "store_delay": -1,
+                    "t_max": {
+                        "unit": "h",
+                        "value": 2.5
+                    },
+                    "type": "Current",
+                    "unit": "A",
+                    "value": 0.8488917862020671
+                }
+            ],
+            "type": "Cycle"
+        }
+    ]
+}

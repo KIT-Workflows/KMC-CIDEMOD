@@ -1,0 +1,41 @@
+Summary of timings                |      reps    wall avg    wall tot     usr avg  usr tot     sys avg  sys tot
+---------------------------------------------------------------------------------------------------------------
+Adaptive TS                       |     66358     0.06246      4144.7    0.061476   4079.5  0.00089499    59.39
+Apply (PETScMatrix)               |    678202  1.2191e-06      0.8268   1.386e-06     0.94   2.949e-08     0.02
+Apply (PETScVector)               |  12762241  1.2154e-06      15.512  1.0931e-06    13.95   2.194e-08     0.28
+Assemble cells                    |  14370269  0.00014645      2104.5  0.00014419   2072.1  2.0229e-06    29.07
+Assemble exterior facets          |   1699157  9.0671e-06      15.406  8.8044e-06    14.96  2.2953e-07     0.39
+Assemble interior facets          |         8  1.9685e-05  0.00015748           0        0           0        0
+Assemble system                   |       600  0.00038429     0.23057  0.00053333     0.32           0        0
+Basic TS                          |     66820      0.0531      3548.1     0.05221   3488.7  0.00081907    54.73
+Build SubdomainMapper             |         1     0.18321     0.18321           0        0           0        0
+Build sparsity                    |      1202  5.8212e-05    0.069971  6.6556e-05     0.08           0        0
+Building function space           |         1     0.22681     0.22681        0.03     0.03           0        0
+Building mesh                     |         1     0.25959     0.25959        0.05     0.05        0.01     0.01
+Compute SCOTCH graph re-ordering  |       604  4.3578e-05    0.026321  3.3113e-05     0.02           0        0
+Compute connectivity 0-0          |         1   1.578e-05   1.578e-05           0        0           0        0
+Compute connectivity 0-1          |         1  0.00035026  0.00035026           0        0           0        0
+Compute connectivity 1-1          |         1  0.00037715  0.00037715           0        0           0        0
+Constant TS                       |       462    0.088876      41.061    0.087489    40.42   0.0012554     0.58
+Delete sparsity                   |      1202  9.2018e-07   0.0011061           0        0           0        0
+DirichletBC apply                 |    614709  2.3942e-05      14.717  2.1994e-05    13.52  7.6459e-07     0.47
+DirichletBC compute bc            |   1021269  8.3429e-06      8.5204  7.9901e-06     8.16  2.7417e-07     0.28
+DirichletBC init facets           |   1021269  7.4192e-07      0.7577  6.7563e-07     0.69  4.8959e-08     0.05
+Explicit Processing               |     66358  3.5728e-06     0.23708  4.2195e-06     0.28   1.507e-07     0.01
+Init dof vector                   |       681  0.00031798     0.21654  2.9369e-05     0.02           0        0
+Init dofmap                       |       604  0.00017244     0.10415  0.00016556      0.1           0        0
+Init dofmap from UFC dofmap       |       604  3.9922e-05    0.024113  4.9669e-05     0.03           0        0
+Init tensor                       |      1202  4.7688e-05     0.05732  9.1514e-05     0.11           0        0
+LU solver                         |       600  0.00018597     0.11158  0.00026667     0.16           0        0
+Number distributed mesh entities  |       603  1.3396e-06   0.0008078           0        0           0        0
+PETSc Krylov solver               |       600   0.0001661    0.099659     0.00025     0.15           0        0
+Post-processing                   |     66658   0.0014223      94.809   0.0014078    93.84  1.0651e-05     0.71
+Problem Setup                     |         1      67.981      67.981       41.58    41.58        2.99     2.99
+SCOTCH: call SCOTCH_graphBuild    |       604  1.1999e-06  0.00072475           0        0           0        0
+SCOTCH: call SCOTCH_graphOrder    |       604  7.7062e-06   0.0046545           0        0           0        0
+SNES solver execution             |     67120    0.052731      3539.3    0.051835   3479.2  0.00081257    54.54
+SNES solver init                  |     67120  8.4435e-05      5.6673  7.7175e-05     5.18  2.9797e-06      0.2
+Simulation time                   |       300      14.079      4223.6      13.749   4124.6     0.20057    60.17
+Solving linear system             |       600  0.00048507     0.29104  0.00031667     0.19  3.3333e-05     0.02
+Store Globals                     |     66658   0.0019023       126.8   0.0018731   124.86  1.3202e-05     0.88
+TF Error                          |     66358   0.0041063      272.48    0.004064   269.68  3.3003e-05     2.19
