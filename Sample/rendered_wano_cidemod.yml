@@ -1,10 +1,11 @@
-Safari 2009 case files:
-  Cycling lumped: params_cycling_lumped.json
-  Cycling workflow: params_cycling_workflow.json
-  OCV_G: OCV_G.txt
-  OCV_LCO: OCV_LCO.txt
-cideMOD parameters:
+Testplan parameters:
   crate: 0.5
   n_cycles: 100
   v_max: 4.2
   v_min: 2.0
+cideMOD parameters:
+  Case name: Sample case
+  Negative electrode OCP: OCV_G.txt
+  Parameters json: params_cycling_workflow.json
+  Positive electrode OCP: OCV_LCO.txt
+  SEI model: Solvent diffusion-limited
