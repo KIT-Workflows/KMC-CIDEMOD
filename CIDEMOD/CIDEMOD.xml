@@ -13,17 +13,21 @@
   </WaNoMeta>
 
   <WaNoRoot name="CIDEMOD">
-      <WaNoDictBox name="Safari 2009 case files">      
-        <WaNoFile logical_filename="params_cycling_lumped.json" name="Cycling lumped" local="True">params_cycling_lumped.json</WaNoFile>
-        <WaNoFile logical_filename="params_cycling_workflow.json" name="Cycling workflow" local="True">params_cycling_workflow.json</WaNoFile>
-        <WaNoFile logical_filename="OCV_G.txt" name="OCV_G" local="True">OCV_G.txt</WaNoFile>
-        <WaNoFile logical_filename="OCV_LCO.txt" name="OCV_LCO" local="True">OCV_LCO.txt</WaNoFile>
+      <WaNoDictBox name="cideMOD parameters">    
+        <WaNoString name="Case name">Sample case</WaNoString>
+        <WaNoFile logical_filename="params_cycling_workflow.json" name="Parameters json" local="True">params_cycling_workflow.json</WaNoFile>
+        <WaNoFile logical_filename="OCV_G.txt" name="Negative electrode OCP" local="True">OCV_G.txt</WaNoFile>
+        <WaNoFile logical_filename="OCV_LCO.txt" name="Positive electrode OCP" local="True">OCV_LCO.txt</WaNoFile>
+        <WaNoDropDown name="SEI model">
+            <Entry id="0" chosen="True">Solvent diffusion-limited</Entry>
+            <Entry id="1">Electron conduction</Entry>
+        </WaNoDropDown>
       </WaNoDictBox>
-      <WaNoDictBox name="cideMOD parameters">
+      <WaNoDictBox name="Testplan parameters">
             <WaNoInt name="n_cycles" description="Cycles">100</WaNoInt>
-            <WaNoFloat name="crate" description="crate">0.5</WaNoFloat>
-            <WaNoFloat name="v_min" description="v_min">2</WaNoFloat>
-            <WaNoFloat name="v_max" description="v_max">4.2</WaNoFloat>
+            <WaNoFloat name="crate" description="C-rate">0.5</WaNoFloat>
+            <WaNoFloat name="v_min" description="Lower voltage cutoff">2</WaNoFloat>
+            <WaNoFloat name="v_max" description="Upper voltage cutoff">4.2</WaNoFloat>
       </WaNoDictBox>
   </WaNoRoot>
 
@@ -36,7 +40,7 @@
       <WaNoInputFile logical_filename="CIDEMOD.py">CIDEMOD.py</WaNoInputFile>
   </WaNoInputFiles>
 
-    <WaNoOutputFiles>
+  <WaNoOutputFiles>
       <WaNoOutputFile>params.json</WaNoOutputFile>
       <WaNoOutputFile>simulation_options.json</WaNoOutputFile>
       <WaNoOutputFile>test_plan.json</WaNoOutputFile>
@@ -47,6 +51,8 @@
       <WaNoOutputFile>Q_sei_a0.txt</WaNoOutputFile>
       <WaNoOutputFile>timings.log</WaNoOutputFile>
       <WaNoOutputFile>voltage.txt</WaNoOutputFile>
+      <WaNoOutputFile>SEI_results.png</WaNoOutputFile>
+      <WaNoOutputFile>voltage_vs_capacity.png</WaNoOutputFile>
   </WaNoOutputFiles>
 
 </WaNoTemplate>
