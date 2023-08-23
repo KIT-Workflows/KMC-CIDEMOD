@@ -32,7 +32,7 @@
             <WaNoFloat name="E3" description = "Second electron reduction">0.32</WaNoFloat>
             <WaNoFloat name="E4" description = "Li2EDC production">0.41</WaNoFloat>
             <WaNoFloat name="E5" description = "Pair Li2EDC production">0.63</WaNoFloat>
-            <WaNoFloat name="E6" description = "Li2EDC+Li2EDC_2 -> SEI_cluster">0.75</WaNoFloat>
+            <WaNoFloat name="E6" description = "Li2EDC+Li2EDC_2 -> SEI_cluster">0.71</WaNoFloat>
             <WaNoFloat name="E7" description = "Second electron reduction (less than 4nm)">0.53</WaNoFloat>
             <WaNoFloat name="E8" description = "Li2EDC+SEI_cluster -> SEI_cluster">0.47</WaNoFloat>
             <WaNoFloat name="E9" description = "Li2EDC_2+SEI_cluster -> SEI_cluster">0.46</WaNoFloat>
